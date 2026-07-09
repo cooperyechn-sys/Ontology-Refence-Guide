@@ -100,7 +100,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
 <!-- Hero -->
 <header class="hero">
   <h1>"本体论/Ontology"参考文献 · 导读</h1>
-  <p class="sub">从哲学根基到智能体应用 · 一份面向计算机/AI背景读者的文献地图</p>
+  <p class="sub">从哲学根基到智能体应用 · 一份面向计算机/AI（Artificial Intelligence，人工智能）背景读者的文献地图</p>
   <div class="tags">
     <span>3 篇核心论文</span>
     <span class="highlight">PDF 托管于本仓库</span>
@@ -129,7 +129,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
 <!-- Guide -->
 <section class="guide" id="guide">
   <h2><span class="icon">📚</span> 导读：如何使用这份文献地图</h2>
-  <p>这份地图围绕 <b>3 篇核心论文</b>，串联起"本体/Ontology"从哲学概念到 LLM 时代技术落地的完整知识链。论文均以中文撰写详细导读。本仓库托管了 <b>中英双语翻译版 PDF</b>（原文 + 中文翻译对照）于 <code>papers/</code> 目录中。</p>
+  <p>这份地图围绕 <b>3 篇核心论文</b>，串联起"本体/Ontology"从哲学概念到 LLM（Large Language Model，大语言模型）时代技术落地的完整知识链。论文均以中文撰写详细导读。本仓库托管了 <b>中英双语翻译版 PDF</b>（原文 + 中文翻译对照）于 <code>papers/</code> 目录中。</p>
   <p>页面按 <b>7 个阶段</b>组织，展示了本体思想演进的逻辑脉络。其中，<b>第三阶段（概念反思）</b>和<b>第六阶段（LLM 时代）</b>包含了这 3 篇核心论文的完整解读。其余阶段提供概念铺垫和上下文，帮助理解论文之间的逻辑关系。</p>
   <div class="path">
     <b>阅读建议：</b> Neuhaus 2018（概念反思）→ Giglou 2023（LLMs4OL）→ Sharma 2024（OG-RAG）。三篇论文构成一条逻辑链——先厘清本体到底是什么，再看 LLM 如何自动构建本体，最后看本体如何让 LLM 更可靠。
@@ -197,7 +197,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
       <div class="paper-key" style="margin:12px 0;padding:14px 16px;border-radius:8px;background:#fefce8;border-left:4px solid #ca8a04">
         <b style="font-size:1rem;color:#ca8a04">核心概念二：为什么注释比逻辑更重要？</b>
         <p style="margin:8px 0 0">传统认知里，本体的核心是形式化公理（axioms）——逻辑公式决定了"什么是什么"。但 Neuhaus 用一个令人拍案叫绝的例子证明，<b>没有注释，公理就是一堆无意义符号</b>。</p>
-        <p style="margin:6px 0 0">考虑下面四组 OWL 公理。从纯逻辑角度看，它们<b>完全同构</b>——都是两个类互不相交（disjoint）：</p>
+        <p style="margin:6px 0 0">考虑下面四组 OWL（Web Ontology Language，W3C 标准本体语言）公理。从纯逻辑角度看，它们<b>完全同构</b>——都是两个类互不相交（disjoint）：</p>
         <table style="width:100%;margin:8px 0;border-collapse:collapse;font-size:0.88rem">
           <tr><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb"><code>P disjointWith R</code></td><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;color:#9ca3af">❌ 无意义符号，根本不是一个本体</td></tr>
           <tr><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb"><code>Dog disjointWith GermanShepherd</code></td><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;color:#9ca3af">❌ 逻辑有效，但内容是假的（德国牧羊犬当然是狗）</td></tr>
@@ -225,7 +225,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
   <div class="section-head">
     <span class="badge" style="background:var(--s4-bg);color:var(--s4)">第四阶段</span>
     <h2>本体工程与标准化</h2>
-    <p class="intro">本体工程落地的三个里程碑：<b>(1) Berners-Lee 等 2001《The Semantic Web》</b>——将本体定位为 Web 数据互操作的基础设施，提出"机器可理解"的数据愿景；<b>(2) Noy &amp; McGuinness 2001《Ontology Development 101》</b>——最实用的手把手构建教程，至今仍是入门首选；<b>(3) OWL（W3C Web Ontology Language, 2004）</b>——W3C 标准化本体语言，提供 RDF/OWL 技术栈，是工业级本体的事实标准。</p>
+    <p class="intro">本体工程落地的三个里程碑：<b>(1) Berners-Lee 等 2001《The Semantic Web》</b>——将本体定位为 Web 数据互操作的基础设施，提出"机器可理解"的数据愿景；<b>(2) Noy &amp; McGuinness 2001《Ontology Development 101》</b>——最实用的手把手构建教程，至今仍是入门首选；<b>(3) OWL（W3C Web Ontology Language, 2004）</b>——W3C（World Wide Web Consortium）标准化本体语言，提供 RDF（Resource Description Framework）/OWL 技术栈，是工业级本体的事实标准。</p>
   </div>
 </section>
 
@@ -234,7 +234,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
   <div class="section-head">
     <span class="badge" style="background:var(--s5-bg);color:var(--s5)">第五阶段</span>
     <h2>本体学习与知识图谱</h2>
-    <p class="intro">手工构建本体不可扩展，自动化方法随之出现：<b>(1) 本体学习（Ontology Learning）</b>——从文本中自动抽取概念、关系、公理。经典框架：Wong 2012 的"本体学习蛋糕"（七层：术语抽取→同义词→概念→层级→关系→规则→公理），每层难度递增；<b>(2) 知识图谱（Knowledge Graph）</b>——以本体为 schema 层，承载大规模实例数据。核心文献：Hogan 等 2021《Knowledge Graphs》ACM 综述（250+ 页），覆盖 KG 全栈。本体学习是 Giglou 2023（LLMs4OL）所对比的旧范式——传统 NLP 管道被 LLM 零样本方法取代。</p>
+    <p class="intro">手工构建本体不可扩展，自动化方法随之出现：<b>(1) 本体学习（Ontology Learning）</b>——从文本中自动抽取概念、关系、公理。经典框架：Wong 2012 的"本体学习蛋糕"（七层：术语抽取→同义词→概念→层级→关系→规则→公理），每层难度递增；<b>(2) 知识图谱（Knowledge Graph）</b>——以本体为 schema 层，承载大规模实例数据。核心文献：Hogan 等 2021《Knowledge Graphs》ACM（Association for Computing Machinery）综述（250+ 页），覆盖 KG（Knowledge Graph，知识图谱）全栈。本体学习是 Giglou 2023（LLMs4OL）所对比的旧范式——传统 NLP（Natural Language Processing，自然语言处理）管道被 LLM 零样本方法取代。</p>
   </div>
 </section>
 
@@ -243,13 +243,13 @@ a:hover{color:var(--link-hover);text-decoration:underline}
   <div class="section-head">
     <span class="badge" style="background:var(--s6-bg);color:var(--s6)">第六阶段 · 含核心论文</span>
     <h2>LLM 时代的本体</h2>
-    <p class="intro">LLM 改变了本体两个维度：<b>构建</b>（Giglou 2023：零样本取代 NLP 管道）和<b>应用</b>（Sharma 2024：本体约束 RAG 检索，提升事实准确性）。两篇互补。</p>
+    <p class="intro">LLM 改变了本体两个维度：<b>构建</b>（Giglou 2023：零样本取代 NLP 管道）和<b>应用</b>（Sharma 2024：本体约束 RAG（Retrieval-Augmented Generation，检索增强生成）检索，提升事实准确性）。两篇互补。</p>
   </div>
 
   <div class="paper" style="border-left-color:var(--s6)">
     <div class="paper-head">
       <div class="paper-title">LLMs4OL: Large Language Models for Ontology Learning</div>
-      <div class="paper-meta">Giglou et al.<br>2023 · ISWC</div>
+      <div class="paper-meta">Giglou et al.<br>2023 · ISWC（International Semantic Web Conference）</div>
     </div>
     <div class="paper-summary">
       <p>这篇论文提出了用大语言模型做本体学习的框架。<b>传统本体学习</b>（见 Wong 2012 的七层蛋糕）依赖 NLP 管道——分词、句法分析、模式匹配，每个环节都可能引入错误。<b>而 LLM 可以直接从文本中零样本抽取概念和关系</b>，省去了繁琐的管道设计。</p>
@@ -290,7 +290,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
   <div class="section-head">
     <span class="badge" style="background:var(--s7-bg);color:var(--s7)">第七阶段</span>
     <h2>智能体时代的本体</h2>
-    <p class="intro">LLM 从问答工具进化为自主智能体，本体的角色从被动知识骨架升级为<b>智能体规划、推理、工具调用的认知基础设施</b>。代表工作：<b>KG-Agent（ACL 2025）</b>——本体嵌入智能体迭代推理循环，将知识图谱的结构化约束注入 LLM 思维链。当前方向：本体驱动智能体（Ontology-Driven Agent），也是 Palantir 等公司在生产环境中探索的核心架构。</p>
+    <p class="intro">LLM 从问答工具进化为自主智能体，本体的角色从被动知识骨架升级为<b>智能体规划、推理、工具调用的认知基础设施</b>。代表工作：<b>KG-Agent（ACL 2025，Association for Computational Linguistics）</b>——本体嵌入智能体迭代推理循环，将知识图谱的结构化约束注入 LLM 思维链。当前方向：本体驱动智能体（Ontology-Driven Agent），也是 Palantir 等公司在生产环境中探索的核心架构。</p>
   </div>
 </section>
 
