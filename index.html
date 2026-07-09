@@ -225,8 +225,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
   <div class="section-head">
     <span class="badge" style="background:var(--s4-bg);color:var(--s4)">第四阶段</span>
     <h2>本体工程与标准化</h2>
-    <p class="intro">概念厘清之后是工程落地。Berners-Lee 的语义网愿景（2001）让本体成为 Web 基础设施的一部分，Noy &amp; McGuinness 2001 给出了最实用的本体构建教程（Ontology Development 101），OWL 则成为 W3C 标准化语言。这一阶段的核心遗产是 RDF/OWL 技术栈，至今仍是工业级本体的基础。</p>
-    <div class="conn">↳ 理论清晰后，需要标准化的语言和实践方法来大规模构建本体。</div>
+    <p class="intro">本体工程落地的三个里程碑：<b>(1) Berners-Lee 等 2001《The Semantic Web》</b>——将本体定位为 Web 数据互操作的基础设施，提出"机器可理解"的数据愿景；<b>(2) Noy &amp; McGuinness 2001《Ontology Development 101》</b>——最实用的手把手构建教程，至今仍是入门首选；<b>(3) OWL（W3C Web Ontology Language, 2004）</b>——W3C 标准化本体语言，提供 RDF/OWL 技术栈，是工业级本体的事实标准。</p>
   </div>
 </section>
 
@@ -235,8 +234,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
   <div class="section-head">
     <span class="badge" style="background:var(--s5-bg);color:var(--s5)">第五阶段</span>
     <h2>本体学习与知识图谱</h2>
-    <p class="intro">手工构建本体不可扩展。本体学习（Ontology Learning，如 Wong 2012 的七层"本体学习蛋糕"）研究如何从文本中自动抽取本体结构，知识图谱（如 Hogan 2021 的 KG 综述）则将本体作为骨架承载大规模实例数据。这一阶段建立了"概念→数据"的关键转换——也是 LLMs4OL（Giglou 2023）论文所取代和超越的旧范式。</p>
-    <div class="conn">↳ 有了标准化语言和工具，下一步是让本体的构建和填充走向自动化。</div>
+    <p class="intro">手工构建本体不可扩展，自动化方法随之出现：<b>(1) 本体学习（Ontology Learning）</b>——从文本中自动抽取概念、关系、公理。经典框架：Wong 2012 的"本体学习蛋糕"（七层：术语抽取→同义词→概念→层级→关系→规则→公理），每层难度递增；<b>(2) 知识图谱（Knowledge Graph）</b>——以本体为 schema 层，承载大规模实例数据。核心文献：Hogan 等 2021《Knowledge Graphs》ACM 综述（250+ 页），覆盖 KG 全栈。本体学习是 Giglou 2023（LLMs4OL）所对比的旧范式——传统 NLP 管道被 LLM 零样本方法取代。</p>
   </div>
 </section>
 
@@ -245,8 +243,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
   <div class="section-head">
     <span class="badge" style="background:var(--s6-bg);color:var(--s6)">第六阶段 · 含核心论文</span>
     <h2>LLM 时代的本体</h2>
-    <p class="intro">大语言模型的出现改变了本体的一切——既改变了构建方式（LLM 自动生成本体，见 Giglou 2023），也改变了应用方式（本体约束 LLM 推理，见 Sharma 2024）。两篇论文互补：一篇解决"怎么建"，一篇解决"怎么用"。</p>
-    <div class="conn">↳ 知识图谱已成熟，LLM 同时带来了本体构建自动化和本体应用新场景。</div>
+    <p class="intro">LLM 改变了本体两个维度：<b>构建</b>（Giglou 2023：零样本取代 NLP 管道）和<b>应用</b>（Sharma 2024：本体约束 RAG 检索，提升事实准确性）。两篇互补。</p>
   </div>
 
   <div class="paper" style="border-left-color:var(--s6)">
@@ -293,8 +290,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
   <div class="section-head">
     <span class="badge" style="background:var(--s7-bg);color:var(--s7)">第七阶段</span>
     <h2>智能体时代的本体</h2>
-    <p class="intro">当 LLM 从"问答工具"进化为"自主智能体"，本体的角色也发生了变化——从被动的知识库骨架升级为智能体理解世界、规划行动、调用工具的认知脚手架。代表性工作包括 KG-Agent（ACL 2025），展示了本体如何嵌入智能体的迭代推理循环。</p>
-    <div class="conn">↳ LLM 已能做本体学习和约束推理，下一步是让智能体在推理循环中主动使用本体。</div>
+    <p class="intro">LLM 从问答工具进化为自主智能体，本体的角色从被动知识骨架升级为<b>智能体规划、推理、工具调用的认知基础设施</b>。代表工作：<b>KG-Agent（ACL 2025）</b>——本体嵌入智能体迭代推理循环，将知识图谱的结构化约束注入 LLM 思维链。当前方向：本体驱动智能体（Ontology-Driven Agent），也是 Palantir 等公司在生产环境中探索的核心架构。</p>
   </div>
 </section>
 
