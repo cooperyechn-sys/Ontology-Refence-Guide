@@ -74,8 +74,9 @@ a:hover{color:var(--link-hover);text-decoration:underline}
 .paper-links{display:flex;gap:8px;flex-wrap:wrap}
 .paper-links a{font-size:0.8rem;padding:4px 12px;border-radius:6px;border:1px solid var(--border);background:var(--bg);color:#4b5563;transition:all .15s}
 .paper-links a:hover{border-color:var(--link);color:var(--link);text-decoration:none}
-.paper-links a.pdf{background:#fee2e2;border-color:#fecaca;color:#dc2626}
-.paper-links a.pdf:hover{background:#fecaca}
+.paper-links .paper-links a.pdf{background:#eef2ff;border-color:#c7d2fe;color:#4338ca}
+.paper-links a.pdf:hover{background:#c7d2fe}
+.bilingual-badge{display:inline-block;font-size:0.78rem;padding:3px 14px;border-radius:99px;background:#fef9c3;color:#a16207;border:1px solid #fde047;font-weight:600}
 .paper-links a.local{background:#f0fdf4;border-color:#bbf7d0;color:#166534}
 .paper-links a.local:hover{background:#bbf7d0}
 
@@ -103,6 +104,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
   <div class="tags">
     <span>3 篇核心论文</span>
     <span class="highlight">PDF 托管于本仓库</span>
+    <span class="bilingual-badge" style="background:#fef9c3;color:#a16207;border-color:#fde047">中英双语翻译版</span>
     <span>含导读 + 原文</span>
     <span>中文总结</span>
   </div>
@@ -127,7 +129,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
 <!-- Guide -->
 <section class="guide" id="guide">
   <h2><span class="icon">📚</span> 导读：如何使用这份文献地图</h2>
-  <p>这份地图围绕 <b>3 篇核心论文</b>，串联起"本体/Ontology"从哲学概念到 LLM 时代技术落地的完整知识链。论文均以中文撰写详细导读，并托管修改后的 PDF 原文于本仓库 <code>papers/</code> 目录中。</p>
+  <p>这份地图围绕 <b>3 篇核心论文</b>，串联起"本体/Ontology"从哲学概念到 LLM 时代技术落地的完整知识链。论文均以中文撰写详细导读。本仓库托管了 <b>中英双语翻译版 PDF</b>（原文 + 中文翻译对照）于 <code>papers/</code> 目录中。</p>
   <p>页面按 <b>7 个阶段</b>组织，展示了本体思想演进的逻辑脉络。其中，<b>第三阶段（概念反思）</b>和<b>第六阶段（LLM 时代）</b>包含了这 3 篇核心论文的完整解读。其余阶段提供概念铺垫和上下文，帮助理解论文之间的逻辑关系。</p>
   <div class="path">
     <b>阅读建议：</b> Neuhaus 2018（概念反思）→ Giglou 2023（LLMs4OL）→ Sharma 2024（OG-RAG）。三篇论文构成一条逻辑链——先厘清本体到底是什么，再看 LLM 如何自动构建本体，最后看本体如何让 LLM 更可靠。
@@ -197,7 +199,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
       <b>核心要点：</b>Gruber 经典定义 = 智识安慰剂（definiens 比 definiendum 更模糊）；"肥沃定义"概念（如 14 世纪英寸的 barley corn 定义 vs 光速定义）；本体 = 含词汇/注释/公理的文档，不是公式集；词汇选择 = 解释的基础（P/R ≠ Dog ≠ Biology）；注释比公理承载更多信息；协作开发不依赖共享概念化；形式化兼容概念论与实在论并给出了桥接定理。
     </div>
     <div class="paper-links">
-      <a href="./papers/Neuhaus-2018-What-is-an-Ontology.pdf" target="_blank" class="local">📄 本仓库 PDF（修改版）</a>
+      <a href="./papers/Neuhaus-2018-What-is-an-Ontology.pdf" target="_blank" class="local">📄 本仓库 PDF（中英双语翻译版）</a>
       <a href="https://arxiv.org/pdf/1810.09171" target="_blank" rel="noopener" class="pdf">📄 arXiv PDF</a>
       <a href="https://arxiv.org/abs/1810.09171v1" target="_blank" rel="noopener">📖 arXiv 摘要页</a>
     </div>
@@ -246,7 +248,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
       <b>核心要点：</b>LLM 零样本本体学习；取代传统 NLP 管道；幻觉问题需本体约束来修正。
     </div>
     <div class="paper-links">
-      <a href="./papers/Giglou-2023-LLMs4OL.pdf" target="_blank" class="local">📄 本仓库 PDF（修改版）</a>
+      <a href="./papers/Giglou-2023-LLMs4OL.pdf" target="_blank" class="local">📄 本仓库 PDF（中英双语翻译版）</a>
       <a href="https://arxiv.org/pdf/2307.16648" target="_blank" rel="noopener" class="pdf">📄 arXiv PDF</a>
       <a href="https://arxiv.org/abs/2307.16648" target="_blank" rel="noopener">📖 arXiv 摘要页</a>
     </div>
@@ -265,7 +267,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
       <b>核心要点：</b>本体作为 RAG 的结构化约束护栏；类型约束过滤错误检索；医疗/金融领域验证有效。
     </div>
     <div class="paper-links">
-      <a href="./papers/Sharma-2024-OG-RAG.pdf" target="_blank" class="local">📄 本仓库 PDF（修改版）</a>
+      <a href="./papers/Sharma-2024-OG-RAG.pdf" target="_blank" class="local">📄 本仓库 PDF（中英双语翻译版）</a>
       <a href="https://arxiv.org/pdf/2412.15235" target="_blank" rel="noopener" class="pdf">📄 arXiv PDF</a>
       <a href="https://arxiv.org/abs/2412.15235" target="_blank" rel="noopener">📖 arXiv 摘要页</a>
     </div>
