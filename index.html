@@ -86,6 +86,13 @@ a:hover{color:var(--link-hover);text-decoration:underline}
 .footer a{color:var(--text-muted)}
 .footer a:hover{color:var(--text)}
 
+/* Palantir callout */
+.p-callout{background:linear-gradient(135deg,#fff7ed,#fff1f2);border:1px solid #fecdd3;border-left:4px solid #e11d48;border-radius:10px;padding:18px 22px;margin:18px 0;font-size:0.9rem;line-height:1.7}
+.p-callout .p-label{display:inline-block;font-size:0.75rem;font-weight:700;color:#e11d48;background:#ffe4e6;padding:2px 10px;border-radius:99px;margin-bottom:10px;letter-spacing:0.03em}
+.p-callout p{margin-bottom:8px;color:#374151}
+.p-callout p:last-child{margin-bottom:0}
+.p-callout b{color:#9f1239}
+
 @media(max-width:640px){
   .hero h1{font-size:1.5rem}
   .paper{padding:16px}
@@ -130,7 +137,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
 <section class="guide" id="guide">
   <h2><span class="icon">📚</span> 导读：如何使用这份文献地图</h2>
   <p>这份地图围绕 <b>3 篇核心论文</b>，串联起"本体/Ontology"从哲学概念到 LLM（Large Language Model，大语言模型）时代技术落地的完整知识链。论文均以中文撰写详细导读。本仓库托管了 <b>中英双语翻译版 PDF</b>（原文 + 中文翻译对照）于 <code>papers/</code> 目录中。</p>
-  <p>页面按 <b>7 个阶段</b>组织，展示了本体思想演进的逻辑脉络。其中，<b>第三阶段（概念反思）</b>和<b>第六阶段（LLM 时代）</b>包含了这 3 篇核心论文的完整解读。其余阶段提供概念铺垫和上下文，帮助理解论文之间的逻辑关系。</p>
+  <p>页面按 <b>7 个阶段</b>组织，展示了本体思想演进的逻辑脉络。其中，<b>第三阶段（概念反思）</b>和<b>第六阶段（LLM 时代）</b>包含了这 3 篇核心论文的完整解读。其余阶段提供概念铺垫和上下文，帮助理解论文之间的逻辑关系。<b>每个阶段均设有红色边框的"Palantir 实践"标注框</b>，以 Palantir Technologies 为案例，展示本体论从反恐情报到战场 AI 的工程化演进。</p>
   <div class="path">
     <b>阅读建议：</b> Neuhaus 2018（概念反思）→ Giglou 2023（LLMs4OL）→ Sharma 2024（OG-RAG）。三篇论文构成一条逻辑链——先厘清本体到底是什么，再看 LLM 如何自动构建本体，最后看本体如何让 LLM 更可靠。
   </div>
@@ -156,7 +163,11 @@ a:hover{color:var(--link-hover);text-decoration:underline}
     <span class="badge" style="background:var(--s1-bg);color:var(--s1)">第一阶段</span>
     <h2>哲学根基/古今有别</h2>
     <p class="intro">"本体"（Ontology）最初是哲学概念，源自古希腊，研究"存在"（being）的本质。在进入计算机科学之前，它在哲学中被讨论了两千多年。理解这段历史不是学术装饰——它解释了为什么今天我们用"类"和"属性"来组织知识时，背后有一种深层的思维传统。</p>
-    <p class="intro"><b>值得注意的是</b>，现在科学，尤其是 Palantir 公司在大模型和智能体背景下所提出的 Ontology，已经不再是哲学意义上的 Ontology，而是指一种知识组织和管理的技术手段。</p>
+    <p class="intro"><b>值得注意的是</b>，今天在 AI 和智能体领域被反复提及的 "Ontology"（尤其是 Palantir 公司实践的版本），已不再是亚里士多德意义上的"存在的科学"，而是一套<b>可操作的知识组织和管理系统</b>。本页面将以 Palantir 为实践锚点，展示本体论如何从书斋走入战场和董事会。</p>
+    <div class="p-callout">
+      <span class="p-label">Palantir 实践</span>
+      <p>Palantir 的 Ontology 核心命题：<b>数据本身没有意义，只有放到关系网络中才能产生洞见</b>。这一思想直接来源于两个源头——哲学本体论对"存在关系"的追问，以及 PayPal 时代对"隐藏关联"的实战经验。理解这条线，才能理解为什么 Palantir 从 2003 年就押注 Ontology，而整个行业直到 2025 年才追上来。</p>
+    </div>
   </div>
 </section>
 
@@ -167,6 +178,10 @@ a:hover{color:var(--link-hover);text-decoration:underline}
     <h2>从哲学到计算</h2>
     <p class="intro">1980-1990年代，AI 研究者发现哲学本体论可以解决知识共享问题。Gruber 1993 给出了"本体是概念化的明确规范"这一经典定义（也是后续 Neuhaus 2018 论文的核心靶子），Guarino 1998 澄清了"本体"与"概念化"的区别，Uschold &amp; Gruninger 1996 给出了第一套工程方法论。</p>
     <div class="conn">↳ 哲学讨论了"什么存在"，计算机把它写成"可执行的规范"。</div>
+    <div class="p-callout">
+      <span class="p-label">Palantir 实践</span>
+      <p><b>PayPal 反欺诈 → 9/11 情报困境 → Palantir 创立。</b>2002 年 PayPal 被 eBay 收购后，Peter Thiel（PayPal 联合创始人）注意到一个模式映射：PayPal 反欺诈的核心不是分析孤立数据点，而是在看似无关的信息之间发现隐藏关联——一个 IP 地址、一张信用卡、一个注册邮箱，单独看都正常，但它们可能指向同一个诈骗网络。2001 年 9/11 事件后，美国情报界面临完全相同的困境：CIA 有名单，FBI 有线索，NSA 有通信记录，但三个机构的系统互不联通，没有人能把碎片拼成完整的图。2003 年 5 月，Thiel 联合 Alex Karp 等人创立 Palantir，CIA 的风险投资臂膀 <b>In-Q-Tel</b> 成为早期投资者和第一个客户。</p>
+    </div>
   </div>
 </section>
 
@@ -177,6 +192,10 @@ a:hover{color:var(--link-hover);text-decoration:underline}
     <h2>概念反思</h2>
     <p class="intro">在本体被广泛使用 25 年之后，Fabian Neuhaus 在 2018 年回头追问：Gruber 那个被每个人引用的经典定义，到底经得起推敲吗？他的答案是：不。这篇论文不仅推翻了经典定义，还给出了一个全新的、可操作的本体定义——它直接影响了 LLM 时代对"本体"的理解方式。</p>
     <div class="conn">↳ 定义已被使用 15-25 年，是时候检验它是否经得起推敲了。</div>
+    <div class="p-callout">
+      <span class="p-label">Palantir 实践</span>
+      <p>Neuhaus 的论文发表于 2018 年，但他的三组件定义——<b>词汇 + 注释 + 逻辑公理 = 可操作本体</b>——恰好精准描述了一个早已存在的产品：<b>Palantir Gotham 的 Dynamic Ontology</b>（2008 年上线）。Gotham 的本体模型由 Object（对象，对应词汇）、Property（属性，对应注释的角色）和 Relationship（关系，对应逻辑公理）三种元素组成。学术界的定义争论花了 25 年，而 Palantir 在成立第五年就建出了成品——不是因为他们更聪明，而是因为<b>情报分析的生死攸关不允许模糊定义</b>。</p>
+    </div>
   </div>
 
   <div class="paper" style="border-left-color:var(--s3)">
@@ -226,6 +245,10 @@ a:hover{color:var(--link-hover);text-decoration:underline}
     <span class="badge" style="background:var(--s4-bg);color:var(--s4)">第四阶段</span>
     <h2>本体工程与标准化</h2>
     <p class="intro">本体工程落地的三个里程碑：<b>(1) Berners-Lee 等 2001《The Semantic Web》</b>——将本体定位为 Web 数据互操作的基础设施，提出"机器可理解"的数据愿景；<b>(2) Noy &amp; McGuinness 2001《Ontology Development 101》</b>——最实用的手把手构建教程，至今仍是入门首选；<b>(3) OWL（W3C Web Ontology Language, 2004）</b>——W3C（World Wide Web Consortium）标准化本体语言，提供 RDF（Resource Description Framework）/OWL 技术栈，是工业级本体的事实标准。</p>
+    <div class="p-callout">
+      <span class="p-label">Palantir 实践</span>
+      <p><b>Palantir 没有走 RDF/OWL 路线。</b>当学术界在 2000 年代围绕 W3C 标准构建语义网时，Palantir 的工程师正驻场在 CIA、NSA 和军方机构，与情报分析师肩并肩工作。他们开发的是 <b>Dynamic Ontology</b>——一套基于 Object-Property-Relationship 的私有模型（2008 年随 Gotham 上线），专为交互式图探索设计。分析师可以在屏幕上拖拽实体节点、连线建立关系，系统自动揭示隐藏的关联网络。这不是仪表盘或报表，而是一张可以无限展开的关系地图。核心设计：<b>本体不是静态元数据层</b>（Schemas），而是分析师与数据的交互界面。这条路径与 W3C 的标准化路线分道扬镳，但在 20 年后被证明是对操作环境更实用的选择。</p>
+    </div>
   </div>
 </section>
 
@@ -235,6 +258,10 @@ a:hover{color:var(--link-hover);text-decoration:underline}
     <span class="badge" style="background:var(--s5-bg);color:var(--s5)">第五阶段</span>
     <h2>本体学习与知识图谱</h2>
     <p class="intro">手工构建本体不可扩展，自动化方法随之出现：<b>(1) 本体学习（Ontology Learning）</b>——从文本中自动抽取概念、关系、公理。经典框架：Wong 2012 的"本体学习蛋糕"（七层：术语抽取→同义词→概念→层级→关系→规则→公理），每层难度递增；<b>(2) 知识图谱（Knowledge Graph）</b>——以本体为 schema 层，承载大规模实例数据。核心文献：Hogan 等 2021《Knowledge Graphs》ACM（Association for Computing Machinery）综述（250+ 页），覆盖 KG（Knowledge Graph，知识图谱）全栈。本体学习是 Giglou 2023（LLMs4OL）所对比的旧范式——传统 NLP（Natural Language Processing，自然语言处理）管道被 LLM 零样本方法取代。</p>
+    <div class="p-callout">
+      <span class="p-label">Palantir 实践</span>
+      <p><b>Palantir 刻意选择了另一条路：人工建模，不做自动学习。</b>在 Palantir 的 Gotham 和 Foundry 中，Ontology 不由算法生成，而是由领域专家（前线分析师、工程师）手工建模——因为他们面对的是<b>反恐情报、战场态势、金融合规</b>等高 stakes 场景，一个自动抽取的错误关系可能意味着错误的目标定位。这完全背离了本体学习社区"自动化第一"的路线，但恰好呼应了 Neuhaus 的核心论点：<b>词汇选择本身就是解释——只有人类能判断 Dog 和 GermanShepherd 的关系是否正确。</b>2016 年，Palantir 将商业产品线重构为 <b>Foundry</b>，Ontology 从 Gotham 的"分析镜子"升级为 Foundry 的"操作系统级控制面板"——不仅能看数据，还能写回生产系统、触发业务流程。增加的 <b>Action Types</b> 定义了"谁可以对什么对象做什么操作"，<b>Functions</b> 封装业务逻辑，标志着本体从"描述性"到"操作性"的关键跃迁。</p>
+    </div>
   </div>
 </section>
 
@@ -244,6 +271,10 @@ a:hover{color:var(--link-hover);text-decoration:underline}
     <span class="badge" style="background:var(--s6-bg);color:var(--s6)">第六阶段 · 含核心论文</span>
     <h2>LLM 时代的本体</h2>
     <p class="intro">LLM 改变了本体两个维度：<b>构建</b>（Giglou 2023：零样本取代 NLP 管道）和<b>应用</b>（Sharma 2024：本体约束 RAG（Retrieval-Augmented Generation，检索增强生成）检索，提升事实准确性）。两篇互补。</p>
+    <div class="p-callout">
+      <span class="p-label">Palantir 实践</span>
+      <p><b>2023 年 4 月，Palantir 发布 AIP（Artificial Intelligence Platform）——比 OG-RAG 更大胆的本体驱动 AI 方案。</b>大多数竞品采用标准 RAG：把文档切片向量化，LLM 搜索后生成回答——AI 当顾问。但 Palantir 有独特优势：<b>20 年打磨的 Ontology 不只是数据字典，而是包含了 Kinetic Layer（动能层）</b>——定义了"谁能改什么、改了会触发什么"。AIP 的 LLM 不是简单地在向量空间里找相似片段，而是在 Ontology 的约束下理解数据——知道"这个对象是什么类型、和谁关联、谁有权操作"。更关键的是 <b>Proposal 模式</b>：AI 不直接改系统，而是生成"提案"等待人类审阅后执行，Agent 的能力边界由 Role × Classification × Purpose 三维动态裁剪。OG-RAG 解决的是"检索准确性"问题（本体 → 更好的搜索结果），AIP 解决的是"操作安全性"问题（本体 → 更安全的 AI 行为）。</p>
+    </div>
   </div>
 
   <div class="paper" style="border-left-color:var(--s6)">
@@ -290,13 +321,29 @@ a:hover{color:var(--link-hover);text-decoration:underline}
   <div class="section-head">
     <span class="badge" style="background:var(--s7-bg);color:var(--s7)">第七阶段</span>
     <h2>智能体时代的本体</h2>
-    <p class="intro">LLM 从问答工具进化为自主智能体，本体的角色从被动知识骨架升级为<b>智能体规划、推理、工具调用的认知基础设施</b>。代表工作：<b>KG-Agent（ACL 2025，Association for Computational Linguistics）</b>——本体嵌入智能体迭代推理循环，将知识图谱的结构化约束注入 LLM 思维链。当前方向：本体驱动智能体（Ontology-Driven Agent），也是 Palantir 等公司在生产环境中探索的核心架构。</p>
+    <p class="intro">LLM 从问答工具进化为自主智能体，本体的角色从被动知识骨架升级为<b>智能体规划、推理、工具调用的认知基础设施</b>。代表工作：<b>KG-Agent（ACL 2025，Association for Computational Linguistics）</b>——本体嵌入智能体迭代推理循环，将知识图谱的结构化约束注入 LLM 思维链。</p>
+    <div class="p-callout">
+      <span class="p-label">Palantir 实践</span>
+      <p><b>Palantir 是目前将"本体驱动智能体"从论文落地到战场和董事会的最激进玩家。</b>以下是从军事到商业的完整图景：</p>
+      <p><b>军事线：从反恐到 AI 战场。</b></p>
+      <ul style="margin:4px 0 8px 18px;color:#374151;font-size:0.88rem;line-height:1.8">
+        <li><b>Gotham（2008-至今）</b>：为 CIA、NSA、美军特种作战司令部提供情报融合与目标分析。核心场景：分析师在图上拖拽恐怖分子嫌疑人节点，系统自动发现隐藏的通信网络、资金链和行动模式。</li>
+        <li><b>Project Maven（2018 接入）</b>：美国国防部旗舰 AI 项目，利用计算机视觉分析无人机视频流，自动识别目标。Palantir 的 Ontology 将识别结果（"疑似车辆"）与情报数据库（"已知敌对车辆型号"）和战场地图（"当前位置在交火区"）关联——三个孤立数据点在 Ontology 中形成可行动的战场态势。</li>
+        <li><b>$10B 美国陆军合同（2025 年授予）</b>：全面整合陆军 AI 系统的企业协议，覆盖情报、后勤、作战规划。核心是 Palantir 的 Ontology 作为"数据到决策"的统一语义层。</li>
+        <li><b>Maven Smart Enterprise（2026 年升级为正式军事项目）</b>：Project Maven 从实验项目升格为五角大楼长期 AI 作战系统，Palantir 的 Ontology 成为美军 AI 基础设施的底层标准。</li>
+      </ul>
+      <p><b>为什么本体在军事场景中不可替代？</b></p>
+      <p>军事 AI 的核心难题不是"模型不够聪明"，而是<b>"AI 的权限边界在哪里？"</b>Palantir 的本体通过三维安全模型解决：<b>Role</b>（你是打击小组组长还是情报分析员？）、<b>Classification</b>（这条数据是 UNCLASSIFIED 还是 TOP SECRET / NOFORN？）、<b>Purpose</b>（你在做生产调度还是战场审计？）。三者同时校验，任一不通过即拒绝访问。这不是传统 RBAC（Role-Based Access Control），而是把"谁能知道什么、谁能做什么"刻在了 Ontology 的结构里——本体本身就是权限模型。</p>
+      <p><b>商业线：从分析工具到企业操作系统。</b>Foundry（2016 年发布）将 Gotham 的情报分析架构复用到商业领域——空客用它管理飞机制造供应链（数万零件、数千供应商的 Ontology），BP 用它管理油田运营，法拉利用它追踪赛车性能数据。核心逻辑不变：<b>Ontology 是企业的 Digital Twin（数字孪生），包含语义层（有什么）和动能层（能做什么）</b>。AIP（2023 年发布）在此基础上接入 LLM，但 AI 的所有操作都必须经过 Ontology 的 Action Type 校验——本体是 AI 的"控制面"（control surface），而不是"训练数据"（training data）。</p>
+      <p><b>一句话：</b>学术论文讨论"本体能不能约束 RAG 的检索结果"，Palantir 的 AIP 已经在讨论"本体能不能约束 AI 扣动扳机"。从 Gruber 1993 的"概念化的规范"到 Palantir 2025 的"AI 行动的安全边界"，这就是本体论从书斋到战场再到董事会的完整旅程。</p>
+    </div>
   </div>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
   <p><b>本体论参考文献导读</b> · 3 篇核心论文 · 7 个阶段 · 从亚里士多德到智能体</p>
+  <p>实践锚点：Palantir Technologies（2003-至今）——本体从哲学概念到战场 AI 的完整工程演进</p>
   <p>PDF 双语翻译版托管于本仓库 <code>papers/</code> 目录 | 纯 HTML/CSS 无依赖</p>
   <p>适合 GitHub Pages 静态部署</p>
 </footer>
