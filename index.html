@@ -74,11 +74,11 @@ a:hover{color:var(--link-hover);text-decoration:underline}
 .paper-links{display:flex;gap:8px;flex-wrap:wrap}
 .paper-links a{font-size:0.8rem;padding:4px 12px;border-radius:6px;border:1px solid var(--border);background:var(--bg);color:#4b5563;transition:all .15s}
 .paper-links a:hover{border-color:var(--link);color:var(--link);text-decoration:none}
-.paper-links .paper-links a.pdf{background:#eef2ff;border-color:#c7d2fe;color:#4338ca}
+.paper-links a.pdf{background:#eef2ff;border-color:#c7d2fe;color:#4338ca}
 .paper-links a.pdf:hover{background:#c7d2fe}
 .bilingual-badge{display:inline-block;font-size:0.78rem;padding:3px 14px;border-radius:99px;background:#fef9c3;color:#a16207;border:1px solid #fde047;font-weight:600}
-.paper-links a.local{background:#f0fdf4;border-color:#bbf7d0;color:#166534}
-.paper-links a.local:hover{background:#bbf7d0}
+.paper-links a.local{background:#fef2f2;border-color:#fecaca;color:#dc2626}
+.paper-links a.local:hover{background:#fecaca}
 
 /* Footer */
 .footer{margin-top:64px;padding:32px 24px;border-top:1px solid var(--border);text-align:center;color:var(--text-muted);font-size:0.82rem}
@@ -185,18 +185,32 @@ a:hover{color:var(--link-hover);text-decoration:underline}
       <div class="paper-meta">Fabian Neuhaus<br>2018</div>
     </div>
     <div class="paper-summary">
-      <p>诺伊豪斯对 Gruber 经典定义发起了尖锐但严谨的攻击。核心论点：<b>"本体是对概念化的规范"这类定义在智识上是无效的——就像让 14 世纪的英国人用"光速在真空中行进的距离"来定义"英寸"。</b>听起来很精确，但没人真能用它来量东西。因为"概念化"（conceptualization）比"本体"本身更难理解——论文列举了文献中至少 5 种互相矛盾的"概念化"定义，从"领域中的对象和关系"到"对现实片段的结构化解释"，证明这个概念根本不是一个可操作的基准。</p>
-      <p><b>"肥沃定义"（fertile definition）标准：一个好的定义必须让接受它的人能真正用它来解释现象、解决问题。</b>反例：中世纪的光速定义是"贫瘠"的（barren），因为没人有设备测光速；同理，基于模糊的"概念化"来定义本体也是贫瘠的。</p>
-      <p>论文给出了自己的替代方案：<b>本体 = 文档（document），包含三个组件——(1) 描述领域的词汇表、(2) 记录词汇含义的注释（annotations）、(3) 关于词汇的逻辑理论（公理+定义）。</b>三者共同使得"胜任的使用者能确定其预期解释（intended interpretation）"。</p>
-      <p><b>为什么"本体 ≠ 一组逻辑公式"？</b>因为本体会随时间变化（版本 = 附加公理），同一本体可以同时维护 OWL 和 FOL 两种表达；甚至不同版本只能在注释层面有所区别（比如新增一条自然语言标签），而公理集完全相同。如果把本体等同一个公式集，这些现象都无法解释。</p>
-      <p><b>词汇选择不是装饰，是本体成立的前提。</b>论文举了一个精彩例子：四个 OWL 公理——"P 与 R 不交""Dog 与 GermanShepherd 不交""Biolgy 与 Chenistry 不交""Biology 与 Chemistry 不交"。从纯逻辑角度看它们同构，但从本体角度看天差地别：P/R 没有建立任何解释，根本不是本体；Dog/GermanShepherd 是假的；Biolgy/Chenistry 拼错了但领域清楚；Biology/Chemistry 才是正确的。能做出这些判断，不是靠逻辑，而是靠词汇选择了自然语言中的词，自然建立了预期解释。</p>
-      <p><b>注释（annotations）往往比公理承载更多信息。</b>注释包括自然语言定义、解释、举例、参考文献、链接、图表甚至音视频。论文区分了"断言性注释"（assertive，如定义文本）和"非断言性注释"（如创建者信息、警告标签），并指出本体中常见的错误之一就是注释和公理不一致。</p>
-      <p><b>最深刻的洞见：协作开发本体不需要共享同一个"概念化"。</b>不同开发者可以对领域有不同甚至矛盾的理解，只要本体在被争论的命题上保持中立即可。这推翻了 Borst 等人所坚持的"本体必须基于共享概念化"的前提。</p>
-      <p><b>兼容概念论与实在论。</b>论文用一套形式定义同时容纳了两种立场，并证明了一个定理：如果一个本体是正确概念化的正确规范，那么它也是一个正确的领域本体（形式版本）。</p>
-      <p>文献史钩沉：1967 年 Mealy 首次在 CS 中使用"ontology"一词；1969 年 McCarthy &amp; Hayes 论证通用智能需要形而上学上充分的世界表征；1978 年 Hayes 发表第一篇标题含"ontology"的 CS 论文（Naive Physics I: Ontology for Liquids）。</p>
+      <p>这篇论文的核心使命只有一个：<b>推翻 Gruber 1993 那个被引用了 25 年的经典定义，并给出一个真正可用的替代方案。</b>以下只讲这篇论文最重要的两个贡献：<b>定义问题</b>和<b>注释问题</b>。</p>
+      <div class="paper-key" style="margin:12px 0;padding:14px 16px;border-radius:8px;background:#f0fdf4;border-left:4px solid #059669">
+        <b style="font-size:1rem;color:#059669">核心概念一：为什么 Gruber 的定义是"智识安慰剂"？</b>
+        <p style="margin:8px 0 0">Gruber 1993 的定义是：<b>"本体是对概念化（conceptualization）的规范（specification）"</b>。听起来很专业，但 Neuhaus 指出——这个定义和"用光速定义英寸"是同一个逻辑错误。</p>
+        <p style="margin:6px 0 0">这里的逻辑是这样的。中世纪英国用"三颗大麦粒首尾相接的长度"来定义一英寸。到了 17 世纪，有人觉得大麦粒不准，提议改用"光在真空中走过的距离"——但那个时代没人能测量光速。把一个模糊的概念（大麦粒/本体）用一个更难把握的概念（光速/概念化）来定义，理论上是进步的，<b>实践上是无用的</b>。</p>
+        <p style="margin:6px 0 0">Gruber 定义的问题一模一样。"概念化"是什么？Neuhaus 翻遍了文献，找到了至少 <b>5 种互相矛盾的"概念化"定义</b>：有人说它是"领域中的对象和关系"，有人说它是"对现实片段的结构化解释"，还有人说它是"世界状态的抽象"……连最核心的术语都没有共识，用它来定义"本体"怎么可能有效？</p>
+        <p style="margin:6px 0 0">Neuhaus 将这类定义称为<b>"贫瘠定义"（barren definition）</b>——因为你拿着它，<b>仍然无法判断一个给定的东西到底是不是本体</b>。一个好的定义必须是"肥沃"的（fertile）：接受这个定义的人，能真正用它来解释现象、指导实践。</p>
+        <p style="margin:6px 0 0"><b>Neuhaus 的替代方案：</b>本体不是一个抽象的"规范"或"概念化"，而是一个<b>具体的文档（document）</b>，由三个部分构成：<b>(1) 词汇表</b>——一份自然语言中的术语清单；<b>(2) 注释</b>——解释这些术语含义的自然语言说明；<b>(3) 逻辑理论</b>——描述术语之间逻辑关系的公理和定义。三者缺一不可，合在一起才能让"胜任的读者确定文档的预期解释"。这个定义的可操作性在于：你可以打开一个文件，检查里面有没有词汇、有没有注释、有没有公理——而不需要去揣测一个看不见摸不着的"概念化"。</p>
+      </div>
+      <div class="paper-key" style="margin:12px 0;padding:14px 16px;border-radius:8px;background:#fefce8;border-left:4px solid #ca8a04">
+        <b style="font-size:1rem;color:#ca8a04">核心概念二：为什么注释比逻辑更重要？</b>
+        <p style="margin:8px 0 0">传统认知里，本体的核心是形式化公理（axioms）——逻辑公式决定了"什么是什么"。但 Neuhaus 用一个令人拍案叫绝的例子证明，<b>没有注释，公理就是一堆无意义符号</b>。</p>
+        <p style="margin:6px 0 0">考虑下面四组 OWL 公理。从纯逻辑角度看，它们<b>完全同构</b>——都是两个类互不相交（disjoint）：</p>
+        <table style="width:100%;margin:8px 0;border-collapse:collapse;font-size:0.88rem">
+          <tr><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb"><code>P disjointWith R</code></td><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;color:#9ca3af">❌ 无意义符号，根本不是一个本体</td></tr>
+          <tr><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb"><code>Dog disjointWith GermanShepherd</code></td><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;color:#9ca3af">❌ 逻辑有效，但内容是假的（德国牧羊犬当然是狗）</td></tr>
+          <tr><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb"><code>Biolgy disjointWith Chenistry</code></td><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;color:#9ca3af">⚠️ 拼错了，但领域意图清楚</td></tr>
+          <tr><td style="padding:6px 10px"><code>Biology disjointWith Chemistry</code></td><td style="padding:6px 10px;color:#059669">✅ 正确的本体公理</td></tr>
+        </table>
+        <p style="margin:6px 0 0">这四组的<b>逻辑结构完全一样</b>，但我们对它们的判断天差地别。是什么让我们能做出这些判断？<b>不是逻辑，而是词汇。</b>词汇选择了自然语言中的词（Dog、Biology、Chemistry），这些词自带人类的背景知识，自动建立了"预期解释"。P 和 R 没有这种背景知识，所以它连本体都不是。</p>
+        <p style="margin:6px 0 0">这就是为什么注释是本体中<b>最被低估的组件</b>。注释包含了：自然语言定义、示例、参考文献、图表甚至音频。Neuhaus 区分了两种注释——<b>"断言性注释"</b>（assertive，如定义文本——它声称了某种语义）和<b>"非断言性注释"</b>（如创建者姓名、警告标签——它在元层面描述本体）。本体工程中常见的错误就是注释和公理打架：逻辑上说"Dog 和 Animal 是父子类"，注释里却写着"Dog 是一种 Mammal"。</p>
+        <p style="margin:6px 0 0"><b>记住这个原则：本体 = 词汇（选哪些词）+ 注释（这些词什么意思）+ 公理（这些词之间什么关系）。</b>三者权重并不相等——注释负责建立"预期解释"，没有它，再漂亮的逻辑也只是一堆符号。</p>
+      </div>
     </div>
     <div class="paper-key" style="background:var(--s3-bg)">
-      <b>核心要点：</b>Gruber 经典定义 = 智识安慰剂（definiens 比 definiendum 更模糊）；"肥沃定义"概念（如 14 世纪英寸的 barley corn 定义 vs 光速定义）；本体 = 含词汇/注释/公理的文档，不是公式集；词汇选择 = 解释的基础（P/R ≠ Dog ≠ Biology）；注释比公理承载更多信息；协作开发不依赖共享概念化；形式化兼容概念论与实在论并给出了桥接定理。
+      <b>一句话总结：</b>本体不是概念化的规范，而是一个<b>文档</b>——由词汇、注释和逻辑理论三部分组成。定义必须"肥沃"（能用来判断对错），注释是本体成立的前提（词汇选择 = 解释的基础）。
     </div>
     <div class="paper-links">
       <a href="./papers/Neuhaus-2018-What-is-an-Ontology.pdf" target="_blank" class="local">📄 本仓库 PDF（中英双语翻译版）</a>
@@ -287,7 +301,7 @@ a:hover{color:var(--link-hover);text-decoration:underline}
 <!-- Footer -->
 <footer class="footer">
   <p><b>本体论参考文献导读</b> · 3 篇核心论文 · 7 个阶段 · 从亚里士多德到智能体</p>
-  <p>PDF 修改版托管于本仓库 <code>papers/</code> 目录 | 纯 HTML/CSS 无依赖</p>
+  <p>PDF 双语翻译版托管于本仓库 <code>papers/</code> 目录 | 纯 HTML/CSS 无依赖</p>
   <p>适合 GitHub Pages 静态部署</p>
 </footer>
 
